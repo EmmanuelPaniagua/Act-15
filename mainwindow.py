@@ -30,12 +30,17 @@ class MainWindow(QMainWindow):
         self.ui.actionDistancia_descendente.triggered.connect(self.action_ordenar_distancia)
         self.ui.actionVelocidad_ascendente.triggered.connect(self.action_ordenar_velocidad)
 
+        self.ui.actionGrafo.triggered.connect(self.action_crear_grafo)
+
     def wheelEvent(self, event):
         if event.delta() > 0:
             self.ui.graphicsView.scale(1.2, 1.2)
         else:
             self.ui.graphicsView.scale(0.8, 0.8)
-
+    @Slot()
+    def action_crear_grafo(self):
+        print ('grafo')
+        
     @Slot()
     def action_ordenar_id(self):
         self.ui.salida.clear()
