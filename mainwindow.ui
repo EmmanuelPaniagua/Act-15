@@ -263,6 +263,7 @@
     </property>
     <addaction name="actionAbrir"/>
     <addaction name="actionGuardar"/>
+    <addaction name="actionGrafo"/>
    </widget>
    <widget class="QMenu" name="menuOrdenar">
     <property name="title">
@@ -305,6 +306,14 @@
   <action name="actionVelocidad_ascendente">
    <property name="text">
     <string>Velocidad (ascendente)</string>
+   </property>
+  </action>
+  <action name="actionGrafo">
+   <property name="text">
+    <string>Grafo</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+G</string>
    </property>
   </action>
  </widget>
