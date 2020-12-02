@@ -1,5 +1,7 @@
 from .particula import Particula
 import json 
+from pprint import pprint
+from pprint import pformat
 
 class Administrador:
     def __init__(self):
@@ -55,3 +57,22 @@ class Administrador:
             return 1
         except:
             return 0
+
+    def dictionary(self):
+        dictionary = dict()
+
+        for particula in self.__particulas:
+            key = particula.origen_x, particula.origen_y 
+            value = particula.destino_x, particula.destino_y, particula.distancia
+            key_2 = particula.destino_x, particula.destino_y
+            value_2 = particula.origen_x, particula.origen_y, particula.distancia
+            if key in dictionary:
+                dictionary[key].append(value)
+            else:
+                dictionary[key] = [value]
+            if key_2 in dictionary:
+                dictionary[key_2].append(value_2)
+            else:
+                dictionary[key_2] = [value_2]
+        str = pformat(dictionary, width=40, indent=1)
+        return str
