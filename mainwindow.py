@@ -39,8 +39,9 @@ class MainWindow(QMainWindow):
             self.ui.graphicsView.scale(0.8, 0.8)
     @Slot()
     def action_crear_grafo(self):
-        print ('grafo')
-        
+        self.ui.salida.clear()
+        self.ui.salida.insertPlainText(self.administrador.dictionary())
+
     @Slot()
     def action_ordenar_id(self):
         self.ui.salida.clear()
