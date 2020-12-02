@@ -263,7 +263,6 @@
     </property>
     <addaction name="actionAbrir"/>
     <addaction name="actionGuardar"/>
-    <addaction name="actionGrafo"/>
    </widget>
    <widget class="QMenu" name="menuOrdenar">
     <property name="title">
@@ -273,8 +272,15 @@
     <addaction name="actionDistancia_descendente"/>
     <addaction name="actionVelocidad_ascendente"/>
    </widget>
+   <widget class="QMenu" name="menuVer">
+    <property name="title">
+     <string>Ver</string>
+    </property>
+    <addaction name="actionGrafo"/>
+   </widget>
    <addaction name="menuArchivo"/>
    <addaction name="menuOrdenar"/>
+   <addaction name="menuVer"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionAbrir">
