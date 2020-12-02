@@ -222,6 +222,8 @@ class Ui_MainWindow(object):
         self.menuArchivo.setObjectName(u"menuArchivo")
         self.menuOrdenar = QMenu(self.menubar)
         self.menuOrdenar.setObjectName(u"menuOrdenar")
+        self.menuVer = QMenu(self.menubar)
+        self.menuVer.setObjectName(u"menuVer")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QStatusBar(MainWindow)
         self.statusbar.setObjectName(u"statusbar")
@@ -229,12 +231,13 @@ class Ui_MainWindow(object):
 
         self.menubar.addAction(self.menuArchivo.menuAction())
         self.menubar.addAction(self.menuOrdenar.menuAction())
+        self.menubar.addAction(self.menuVer.menuAction())
         self.menuArchivo.addAction(self.actionAbrir)
         self.menuArchivo.addAction(self.actionGuardar)
-        self.menuArchivo.addAction(self.actionGrafo)
         self.menuOrdenar.addAction(self.actionId_ascendente)
         self.menuOrdenar.addAction(self.actionDistancia_descendente)
         self.menuOrdenar.addAction(self.actionVelocidad_ascendente)
+        self.menuVer.addAction(self.actionGrafo)
 
         self.retranslateUi(MainWindow)
 
@@ -285,5 +288,6 @@ class Ui_MainWindow(object):
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_5), QCoreApplication.translate("MainWindow", u"Dibujar", None))
         self.menuArchivo.setTitle(QCoreApplication.translate("MainWindow", u"Archivo", None))
         self.menuOrdenar.setTitle(QCoreApplication.translate("MainWindow", u"Ordenar", None))
+        self.menuVer.setTitle(QCoreApplication.translate("MainWindow", u"Ver", None))
     # retranslateUi
 
